@@ -1,1 +1,113 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eerah's Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .project {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        #timezone-overlap {
+            background-color: #282c34;
+            position: relative;
+        }
+        #timezone-overlap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(to right, #e4a211 0, #61dafb 40px, transparent 40px) 0 40px / 200px 40px,
+                linear-gradient(to right, #ead48e 0, #ead48e 80px, transparent 80px) 0 120px / 200px 40px;
+            background-repeat: no-repeat;
+        }
+        #mondrian {
+            background-color: #F2F5F1;
+            background-image: 
+                linear-gradient(to right, #000 4px, transparent 4px),
+                linear-gradient(to bottom, #000 4px, transparent 4px);
+            background-size: 50px 50px;
+            background-position: -2px -2px;
+            position: relative;
+        }
+        #mondrian::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(to right, #F2F5F1 0, #F2F5F1 66px, #0400ff 66px, 132px, #DD0100 132px 200px) 0 0 / 200px 66px,
+                linear-gradient(to bottom, #F2F5F1 0, #F2F5F1 66px, #FEC200 66px 132px, #F2F5F1 132px 200px) 132px 0 / 68px 200px,
+                linear-gradient(to bottom, #000000 0 66px, #F2F5F1 66px) 0 132px / 132px 68px,
+                linear-gradient(to right, #F2F5F1 0, #F2F5F1 100px, #DD0100 100px 150px, #F2F5F1 150px 200px) 0 0 / 200px 100px,
+                linear-gradient(to bottom, #F2F5F1 0, #F2F5F1 50px, #FEC200 50px 150px, #000000 150px 200px) 100px 0 / 100px 200px,
+                linear-gradient(to bottom, #005B9A 0 50px, #F2F5F1 50px 150px, #000000 150px 200px) 0 100px / 100px 100px;
+            background-repeat: no-repeat;
+        }
+        #mondrian::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(to right, black 1px, transparent 1px),
+                linear-gradient(to bottom, black 1px, transparent 1px);
+            background-size: 66px 66px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://eerah.github.io/timezoneoverlap/">
+            <div class="project" id="timezone-overlap">
+                <div class="project-text">Timezone Overlap</div>
+            </div>
+        </a>
+        <a href="https://eerah.github.io/mondrian/">
+            <div class="project" id="mondrian">
+                <div class="project-text">Mondrian Generator</div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
